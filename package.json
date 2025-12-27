@@ -1,0 +1,14 @@
+{
+  "name": "gptrapid",
+  "version": "1.0.0",
+  "description": "Lightning fast, lightweight ChatGPT client - zero bloat, pure performance",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run server.ts",
+    "start": "bun run server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
