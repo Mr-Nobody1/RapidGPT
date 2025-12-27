@@ -14,7 +14,7 @@ A lightweight alternative to ChatGPT's web app that eliminates memory leaks, lag
 
 ![Home Screen](media/home_screen.png)
 ![Settings Modal](media/settings_modal.png)
-![Chat Interface](media/chat_interface.png)
+<!-- ![Chat Interface](media/chat_interface.png) -->
 
 ---
 
