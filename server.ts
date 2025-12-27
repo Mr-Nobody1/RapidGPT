@@ -1,5 +1,5 @@
 /**
- * GPTRapid Development Server
+ * RapidGPT Development Server
  * A simple Bun server to serve the static files
  */
 
@@ -10,18 +10,18 @@ const server = Bun.serve({
   async fetch(req) {
     const url = new URL(req.url);
     let path = url.pathname;
-    
+
     // Default to index.html
     if (path === '/') {
       path = '/index.html';
     }
-    
+
     // Get file path
     const filePath = `.${path}`;
-    
+
     // Try to serve the file
     const file = Bun.file(filePath);
-    
+
     if (await file.exists()) {
       // Determine content type
       const ext = path.split('.').pop();
@@ -36,21 +36,21 @@ const server = Bun.serve({
         'svg': 'image/svg+xml',
         'ico': 'image/x-icon'
       };
-      
+
       return new Response(file, {
         headers: {
           'Content-Type': contentTypes[ext || 'html'] || 'text/plain'
         }
       });
     }
-    
+
     // 404 for missing files
     return new Response('Not Found', { status: 404 });
   }
 });
 
 console.log(`
-🚀 GPTRapid is running!
+🚀 RapidGPT is running!
 
    ╔══════════════════════════════════════╗
    ║                                      ║

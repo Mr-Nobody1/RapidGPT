@@ -1,5 +1,5 @@
 {
-  "name": "gptrapid",
+  "name": "RapidGPT",
   "version": "1.0.0",
   "description": "Lightning fast, lightweight ChatGPT client - zero bloat, pure performance",
   "type": "module",

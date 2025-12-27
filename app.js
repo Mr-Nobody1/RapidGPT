@@ -1,5 +1,5 @@
 /**
- * GPTRapid - Lightweight ChatGPT Client
+ * RapidGPT - Lightweight ChatGPT Client
  * A high-performance vanilla JavaScript alternative to ChatGPT's web app
  */
 
@@ -69,7 +69,7 @@ function init() {
 
 function loadState() {
     // Load from localStorage
-    const savedState = localStorage.getItem('gptrapid_state');
+    const savedState = localStorage.getItem('RapidGPT_state');
     if (savedState) {
         const parsed = JSON.parse(savedState);
         Object.assign(state, parsed);
@@ -84,7 +84,7 @@ function loadState() {
 }
 
 function saveState() {
-    localStorage.setItem('gptrapid_state', JSON.stringify({
+    localStorage.setItem('RapidGPT_state', JSON.stringify({
         conversations: state.conversations,
         currentConversationId: state.currentConversationId,
         apiKey: state.apiKey,
@@ -568,7 +568,7 @@ function exportConversations() {
     
     const a = document.createElement('a');
     a.href = url;
-    a.download = `gptrapid-export-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `RapidGPT-export-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     
     URL.revokeObjectURL(url);
@@ -577,7 +577,7 @@ function exportConversations() {
 
 function clearAllData() {
     if (confirm('Are you sure you want to clear all data? This cannot be undone.')) {
-        localStorage.removeItem('gptrapid_state');
+        localStorage.removeItem('RapidGPT_state');
         location.reload();
     }
 }
